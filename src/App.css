@@ -1,38 +1,191 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.table-container {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.college-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.college-table th,
+.college-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.college-table th {
+  background-color: #78bec3;
+  cursor: pointer;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 12px;
+  vertical-align: middle;
+}
+
+.college-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.college-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.cd-rank-column {
+  width: 70px;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+}
+
+.featured-row {
+  background-color: #fff0e6 !important;
+}
+
+.featured-label {
+  position: absolute;
+  top: -6px;
+  left: 12px;
+  background-color: #ff284b;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 1;
+}
+
+.college-name-cell{
+  position: relative;
+  padding-top: 20px !important;
+}
+
+.college-name {
+  position: relative;
+  color: #8ad9ef;
+  z-index: 0;
+}
+
+.header-cell {
+  position: relative;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrows {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 22px;
+  height: 22px;
+  margin-left: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.arrows:hover {
+  background-color: #3e6366;
+  border-radius: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.arrows svg {
+  width: 16px;
+  height: 16px;
 }
+
+.user-review-content {
+  display: flex;
+  align-content: flex-start;
+  padding: 12px;
+  height: 100%;
+}
+
+.fees-content {
+  color: #71d4be;
+  font-weight: bold;
+}
+
+.fees-subtext {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 4px;
+  line-height: 1.2;
+}
+
+.user-review-cell {
+  padding: 12px !important;
+}
+
+.user-review-content {
+  height: fit-content;
+}
+
+.user-review-content .star {
+  margin-right: 5px;
+}
+
+.review-count {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 4px;
+}
+
+.total-colleges {
+  color: #ffd700; /* Yellow shade for the total number of colleges */
+  font-weight: bold;
+}
+
+.user-review-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user-review-content, .review-count {
+  text-align: left;
+}
+
+.sort-icon {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.placement-cell {
+  padding: 12px !important;
+}
+
+.placement-content {
+  font-weight: bold; 
+  color: #71d4be; 
+}
+
+.placement-subtext {
+  font-size: 0.8em;
+  color: #666; 
+  margin-top: 4px; 
+}
+
